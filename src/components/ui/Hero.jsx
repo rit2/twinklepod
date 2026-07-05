@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="mx-4 md:mx-12 mt-4">
       <div className="relative rounded-3xl overflow-hidden">
         <img
-          src="/hero-banner.png"
+          src="/hero-banner.jpeg"
           alt="A magical treehouse with children reading books, surrounded by friendly animals and stacks of colorful books"
           className="w-full object-cover"
         />
