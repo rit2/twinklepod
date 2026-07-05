@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F0;
+  --color-cream-dark: #F5E6D3;
+  --color-peach: #FFDAB9;
+  --color-peach-light: #FFE8D6;
+  --color-green-soft: #7CB69D;
+  --color-green-dark: #4A8B6F;
+  --color-blue-soft: #87CEEB;
+  --color-purple-soft: #B8A9C9;
+  --color-orange-warm: #F4A460;
+  --color-brown-warm: #8B6914;
+  --color-text-primary: #2D3748;
+  --color-text-secondary: #4A5568;
+  --color-star: #F6C23E;
+
+  --font-heading: 'Fredoka', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  background-image: url('/paper-texture.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
