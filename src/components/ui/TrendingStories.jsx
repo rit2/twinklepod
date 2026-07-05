@@ -15,13 +15,13 @@ export default function TrendingStories() {
   return (
     <section className="px-4 md:px-12 py-6">
       <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary text-center mb-6">Books</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4">
         {books.map((book) => (
           <Link key={book._id || book.id} to={`/book/${book._id || book.id}`} className="group">
             <img
               src={book.coverImage || book.cover}
               alt={book.title}
-              className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-lg shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
+              className="w-full h-44 sm:h-48 md:h-56 object-cover rounded-lg shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
               loading="lazy"
             />
           </Link>
