@@ -15,7 +15,7 @@ export default function TrendingStories() {
   return (
     <section className="px-4 md:px-12 py-6">
       <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary text-center mb-6">Books</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
         {books.map((book) => (
           <Link key={book._id || book.id} to={`/book/${book._id || book.id}`} className="group">
             <img
