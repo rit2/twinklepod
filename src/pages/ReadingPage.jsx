@@ -78,9 +78,17 @@ export default function ReadingPage() {
       </div>
 
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-12 md:py-20 pb-40">
-        <p className={`leading-relaxed transition-all ${darkMode ? 'text-gray-200' : 'text-text-primary'}`} style={{ fontSize: `${fontSize}px`, lineHeight: '1.8' }}>
-          {pages[currentPage]}
-        </p>
+        {pages[currentPage]?.startsWith('http') ? (
+          <img
+            src={pages[currentPage]}
+            alt={`Page ${currentPage + 1}`}
+            className="w-full rounded-xl shadow-md"
+          />
+        ) : (
+          <p className={`leading-relaxed transition-all ${darkMode ? 'text-gray-200' : 'text-text-primary'}`} style={{ fontSize: `${fontSize}px`, lineHeight: '1.8' }}>
+            {pages[currentPage]}
+          </p>
+        )}
       </div>
 
       <div className={`fixed bottom-0 left-0 right-0 px-4 md:px-8 py-4 border-t ${darkMode ? 'bg-gray-900 border-gray-700' : 'bg-cream border-gray-200'}`}>
