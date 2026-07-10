@@ -4,11 +4,9 @@ export default function Hero() {
       <div className="relative rounded-3xl overflow-hidden">
         <img
           src="/hero-banner.jpeg"
-          alt="A magical treehouse with children reading books, surrounded by friendly animals and stacks of colorful books"
+          alt="A child reading a paper story book in a magical world"
           className="w-full object-cover"
         />
-        {/* Bottom fade to blend with paper texture background */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F5E6D3] to-transparent"></div>
       </div>
     </section>
   );
