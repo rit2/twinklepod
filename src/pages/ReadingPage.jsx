@@ -77,15 +77,15 @@ export default function ReadingPage() {
         <div className="h-full bg-green-soft transition-all duration-300" style={{ width: `${progress}%` }}></div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 md:px-12 py-12 md:py-20 pb-40">
+      <div className="mx-auto px-4 md:px-8 py-8 md:py-12 pb-40 flex items-center justify-center min-h-[calc(100vh-10rem)]">
         {pages[currentPage]?.startsWith('http') ? (
           <img
             src={pages[currentPage]}
             alt={`Page ${currentPage + 1}`}
-            className="w-full rounded-xl shadow-md"
+            className="max-w-full max-h-[80vh] w-auto h-auto rounded-xl shadow-md object-contain"
           />
         ) : (
-          <p className={`leading-relaxed transition-all ${darkMode ? 'text-gray-200' : 'text-text-primary'}`} style={{ fontSize: `${fontSize}px`, lineHeight: '1.8' }}>
+          <p className={`max-w-4xl leading-relaxed transition-all ${darkMode ? 'text-gray-200' : 'text-text-primary'}`} style={{ fontSize: `${fontSize}px`, lineHeight: '1.8' }}>
             {pages[currentPage]}
           </p>
         )}
